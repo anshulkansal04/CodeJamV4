@@ -20,9 +20,11 @@ const letterToSymbol = (letter) => letter === 'x' ? xSymbol : oSymbol;
 const handleWin = (letter) => {
   gameIsLive = false;
   if (letter === 'x') {
-    statusDiv.innerHTML = `${letterToSymbol(letter)} has won!`;
+    statusDiv.innerHTML = `<h2>${letterToSymbol(letter)} has won!</h2>`;
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
   } else {
-    statusDiv.innerHTML = `<span>${letterToSymbol(letter)} has won!</span>`;
+    statusDiv.innerHTML = `<h2>${letterToSymbol(letter)} has won!</h2>`;
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
   }
 };
 
@@ -101,6 +103,7 @@ const handleReset = () => {
     cellDiv.classList.remove('o');
     cellDiv.classList.remove('won');
   }
+  document.querySelector('.imgbox').remove('.imgbox');
   gameIsLive = true;
 };
 
