@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  background: #14BDAC;
+  background: rgb(237, 237, 169);
   margin: 50px;
   padding: 50px;
   border-radius: 25px;
@@ -23,7 +23,7 @@ body {
 }
 
 .title span {
-  color: #F2EBD3;
+  color: #545454;
 }
 
 .status-action {
@@ -35,7 +35,7 @@ body {
 }
 
 .status span {
-  color: #F2EBD3;
+  color: #545454;
 }
 
 .reset {
@@ -43,11 +43,11 @@ body {
 }
 
 .reset:hover {
-  color: #F2EBD3;
+  color: #e2be47;
 }
 
 .game-grid {
-  background: #0DA192;
+  background: #545454;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -55,8 +55,14 @@ body {
   margin-top: 50px;
 }
 
+.imgbox img{
+  width: 0;
+  transition: width 1s ease-in-out;
+  margin-top: 400px;
+}
+
 .game-cell {
-  background: #14BDAC;
+  background: rgb(237, 237, 169);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,11 +79,12 @@ body {
 .x::after {
   content: '×';
   font-size: 200px;
+  color: rgb(237, 73, 73);
 }
 
 .o::after {
   content: '○';
-  color: #F2EBD3;
+  color: rgb(70, 44, 7);
   font-size: 225px;
 }
 
@@ -98,10 +105,12 @@ body {
 
   .x::after {
     font-size: 150px;
+    color: red;
   }
 
   .o::after {
     font-size: 175px;
+    color: rgb(70, 44, 7);
   }
 }
 
